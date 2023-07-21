@@ -1,0 +1,143 @@
+
+.outerDiv {
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 2px 4px rgba(0.2, 0.2, 0.2, 0.2);
+    
+  }
+  
+  .form-control {
+    padding: 0.75rem !important;
+    margin: 15px 0;
+    border: 1px solid #ccc !important;
+  }
+  .row{
+    padding-top:10px ;
+    
+  }
+
+
+  h2 {
+    font-size: 24px; 
+   font-weight: bold ;
+    margin-left: 47px;
+  }
+
+
+/* ............................................ */
+  
+.form-control {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+label {
+  color: #777;
+  margin: 15px 0;
+}
+/* ............................................ */
+
+
+
+  /* ....................button................. */
+
+
+  .btn-secondary2 {
+    background-color: #ff6320; 
+    color: #fff; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary1 {
+    background-color: #ffffff; 
+    color: #ff6320;
+    padding: 10px 20px;
+ 
+    border: 1px solid #ff6320;
+   
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color:  rgb(255, 183, 89); 
+  }
+  
+  
+  .btn-secondary[disabled] {
+    background-color: #ff6320; 
+    cursor: not-allowed;
+  }
+  
+  
+  .btn-secondary[disabled]:hover {
+    background-color:  rgb(255, 183, 89); 
+  }
+
+
+  /*................... Icons ..............*/
+.fa-solid {
+ 
+  font-size: 18px;
+  color: #ff6320; 
+  cursor: pointer;
+  margin-right: 5px; 
+}
+
+/* Style for the Trash icon */
+.fa-trash:hover {
+  color: rgb(255, 183, 89); 
+}
+
+/* Style for the Edit icon */
+.fa-pen-to-square:hover {
+  color: rgb(255, 183, 89); 
+}
+
+
+
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #ccc;
+}
+
+.table thead th {
+  vertical-align: bottom;
+
+  background-color: #d8d8d8;
+  color: #000;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #ccc;
+}
+
+/* Style for table cells with gray background */
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa; /* Gray background for odd rows */
+}
+
+/* Style for table cells with black text color */
+.table tbody td {
+  color: #000; /* Black text color for table cells */
+}

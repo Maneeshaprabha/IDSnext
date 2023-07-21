@@ -1,0 +1,150 @@
+
+<div class="row">
+  <h2>Angular-Curd Operation</h2>
+  <div class="col-md-4">
+
+    <div class="outerDiv">
+      <form #form="ngForm" >
+      <div class="row">
+        <div class="col-md-7">
+          <label > Name</label>
+        </div>
+        <div class="col-md-10">
+          <input type="text"  name="Name"  required  #name="ngModel" [(ngModel)]="appObj.Name"    class="form-control" id="Name" >
+       
+          <div *ngIf="name.touched" >
+            <span *ngIf="name.errors?.['required']">Required</span>
+          </div>
+      
+      </div>
+        
+      </div>
+
+
+
+
+   
+
+
+      <div class="row">
+        <div class="col-md-7">
+          <label >Designation</label>
+        </div>
+        <div class="col-md-10">
+          <select  name="Designation"  [(ngModel)]="appObj.Designation"   class="form-control" id="Designation">
+               <!-- <option>Select</option> -->
+               <option>Manager</option>
+               <option>IT Manager</option>
+               <option>Developer</option>
+          </select>
+        </div>
+      </div>
+
+
+    
+
+      
+    
+
+      
+
+
+      <div class="row">
+        <div class="col-md-7">
+          <label > Salary</label>
+        </div>
+        <div class="col-md-10">
+          <input type="text"  name="Salary" required  #Salary="ngModel" [(ngModel)]="appObj.Salary"    name="Salary"   class="form-control" id="Salary">
+          <div *ngIf="Salary.touched" >
+            <span *ngIf="Salary.errors?.['required']">Required</span>
+          </div>
+      </div>
+      </div>
+      
+
+ 
+      
+
+      <div class="row">
+        <div class="col-md-6">
+        
+      </div>
+      <div class="col-md-7 text-end">
+        <button class="btn btn-secondary1 btn-sm"  [disabled]="form.invalid"  (click)="onReset()">Reset</button>
+        <button class="btn btn-secondary2 btn-sm mx-2" [disabled]="form.invalid" (click)="OnSave()"   >Save</button>
+      
+
+
+    </div>
+  </div>
+</form>
+</div>
+  </div>
+
+  <!-- ........................table........ -->
+  <div class="col-md-8">
+      
+      <div class="outerDiv">
+        
+          
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Salary</th> 
+                  <th>action</th>
+                </tr>
+              </thead>
+              <tbody>
+              
+              <ng-container *ngIf="appArr.length !=0">
+                <tr *ngFor="let item of appArr; let No = index">
+                  <td>{{ No + 1 }}</td>
+                  <td>{{ item.Name }}</td>
+          
+                  <td>{{ item.Designation }}</td>
+                 
+                  <td>{{ item.Salary }}</td>
+                  <td>
+                    
+                      <i class="fa-solid fa-trash" (click)="onDelete(item)" aria-hidden="true"></i>
+                      <i class="fa-solid fa-pen-to-square"  (click)="onEdit(item)" aria-hidden="true"></i>
+                    <!-- Add actions here (e.g., Edit, Delete, etc.) -->
+                  </td>
+              </tr>  
+            </ng-container>
+
+
+                  <ng-container *ngIf="appArr.length ==0" >
+                  <tr>
+                      <td colspan="8" class="text-center"> No Record Present</td>
+                  </tr>
+
+                  </ng-container>
+                
+              </tbody>
+            </table>
+        </div>
+       </div>
+    </div>
+   
+  </div>
+</div>
+<!-- .............................table.........................
+<div class="container">
+<h2>
+  <table>
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Id</th>
+
+    </thead>
+  </table>
+</h2>
+</div> -->

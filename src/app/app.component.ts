@@ -8,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent  implements OnInit{
 
   appObj: AppObj;
-  sortBy: string;
-  searchText: string;
   appArr: AppObj[] = [];
 
 
   constructor() {
     this.appObj = new AppObj(); // Corrected the instance creation
-    this.sortBy = '';
-    this.searchText = '';
+  
+
   }
 
 
@@ -62,6 +60,7 @@ export class AppComponent  implements OnInit{
 }
 
 
+
 onDelete(item: AppObj) {
   const isData = localStorage.getItem("AppData");
   if (isData != null) {
@@ -75,7 +74,7 @@ onDelete(item: AppObj) {
       const confirmation = confirm("Are you sure you want to delete this item?");
       if (confirmation) {
         // Use splice(index, 1) to remove the item from the array
-        localData.splice(0, 1);
+        localData.splice(index, 1);
         localStorage.setItem("AppData", JSON.stringify(localData));
         this.getAllApp(); // Update the displayed data after deletion
 
